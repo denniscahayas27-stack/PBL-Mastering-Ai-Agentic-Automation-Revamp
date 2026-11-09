@@ -1,0 +1,1314 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="web_standard" name="shell-type">
+<title>MAXY AI Hub — Masterclass Agentic AI &amp; n8n Automation</title>
+<link href="https://lh3.googleusercontent.com/aida-public/AB6AXuDNjZf-W7eH4jrbQ6JvHjtXy5sdEFNmN_ZL326sVKv06aANxgbTHLIWhXa-Mp1SDaP-oVzyzGGhsYF9-gOliRtKADh1MvwFCqd00Sy7RYxGmdOxNkh694K9Yhajhdp5PJMMSie3r1mgaTuxmlP1V-M8zmYWmWefJ_2d0rOqwGytLosZl4raw67skeLpUiAJisC9IifKt0eczlbtTx2pu_0PlxYQ4nKPMLunrTRQMdWTPPpopzHb2mmDkw" rel="icon" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Montserrat:wght@600;700;800;900&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "navy-dark": "#071141",
+            "navy-deep": "#081D30",
+            "navy-cosmic": "#0A1128",
+            "primary-container": "#1E2756",
+            "amber-brand": "#FBB041",
+            "amber-dark": "#FEA619",
+            "cyan-glow": "#06B6D4",
+            "cyan-soft": "#E6F6F9",
+            "cyan-deep": "#086676",
+            "violet-glow": "#8B5CF6",
+            "violet-deep": "#7C3AED",
+            "surface-bg": "#F8FAFC",
+            "border-subtle": "#E2E8F0"
+          },
+          fontFamily: {
+            sans: ["'Plus Jakarta Sans'", "sans-serif"],
+            display: ["'Montserrat'", "sans-serif"],
+            mono: ["'JetBrains Mono'", "monospace"]
+          },
+          animation: {
+            'marquee': 'marquee 22s linear infinite',
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          },
+          keyframes: {
+            marquee: {
+              '0%': { transform: 'translateX(0%)' },
+              '100%': { transform: 'translateX(-50%)' },
+            }
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    @layer base {
+      html, body { margin:0; padding:0; }
+      body { overscroll-behavior: none; }
+    }
+    .hide-scrollbar::-webkit-scrollbar { display: none; }
+    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-surface-bg font-sans text-slate-800 antialiased selection:bg-amber-brand selection:text-navy-dark">
+<!-- ================= TOP FLASH NOTIFICATION BAR ================= -->
+<div class="fixed top-0 w-full z-50 shadow-[0_1px_8px_rgba(0,0,0,0.15)] bg-navy-dark text-white border-b border-violet-500/20">
+<div class="text-white py-1.5 px-4 md:px-6">
+<div class="max-w-[1280px] mx-auto flex flex-wrap items-center justify-between gap-2 text-xs">
+<div class="flex items-center gap-2">
+<img alt="MAXY Academy Icon" class="w-4 h-4 rounded object-contain inline-block bg-white/10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc4tFE5LnsyIBJloK9Hs-mIqJjswo5sSpRoOrpzBKwpaFhhQebDInEpyrVnrFTR5iK07hAKliAHsfvwWcfj0F_vX5FRJ7JRm1aPg2w7WwI6IHOVcvs5Bx4gEG6MH9ZqgK8ECsj3UDX2rHeU-c-BLgL7-9HRLVj3K1nHwhZNTpDDu8xerFpjOeMlN_zEGfTj_ck-4HTG0uClfU4dZCtQsD1PXZ_xQcUra5Ln6idVosBwnLrNxGhLQVLqQ">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-bold uppercase tracking-wider text-[10px] bg-amber-brand text-navy-dark">Batch 07 Intake</span>
+<span class="text-slate-200 hidden sm:inline">March 14–15, 2026 • Menara Sentraya 18th Fl, Jakarta • <strong class="text-amber-brand font-bold">Only 5 Seats Remaining</strong></span>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1 font-mono text-[11px] text-slate-300">
+<span class="hidden md:inline text-slate-400">Flash Enrollment Closes In:</span>
+<span class="px-1.5 py-0.5 rounded bg-white/10 font-bold text-white">02d</span>:
+            <span class="px-1.5 py-0.5 rounded bg-white/10 font-bold text-white">14h</span>:
+            <span class="px-1.5 py-0.5 rounded bg-white/10 font-bold text-white">38m</span>:
+            <span class="px-1.5 py-0.5 rounded bg-white/10 font-bold text-white">12s</span>
+</div>
+<a class="font-bold flex items-center gap-1 text-amber-brand hover:underline" href="https://wa.me/6282144995255?text=Hello%20MAXY%20AI%20Hub%2C%20I%20would%20like%20to%20claim%20the%20Batch%2007%20grant%20discount" target="_blank">
+            Claim Discount <span class="material-symbols-outlined text-xs">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- MAIN NAVBAR (FITUR 1 & FITUR 3 STICKY ANCHOR MENU + OFFICIAL LOGO https://lh3.googleusercontent.com/aida-public/AB6AXuDNjZf-W7eH4jrbQ6JvHjtXy5sdEFNmN_ZL326sVKv06aANxgbTHLIWhXa-Mp1SDaP-oVzyzGGhsYF9-gOliRtKADh1MvwFCqd00Sy7RYxGmdOxNkh694K9Yhajhdp5PJMMSie3r1mgaTuxmlP1V-M8zmYWmWefJ_2d0rOqwGytLosZl4raw67skeLpUiAJisC9IifKt0eczlbtTx2pu_0PlxYQ4nKPMLunrTRQMdWTPPpopzHb2mmDkw) -->
+<header class="bg-white/95 backdrop-blur-xl h-20 border-b border-slate-200 text-slate-800">
+<div class="max-w-[1280px] mx-auto h-full px-4 md:px-6 flex items-center justify-between gap-4">
+<!-- Official MAXY ACADEMY / MAXY AI HUB Logo -->
+<a class="flex items-center gap-3 group flex-shrink-0" href="#hero">
+<img alt="MAXY Academy Logo" class="h-10 w-10 rounded-xl object-contain bg-navy-dark p-1 shadow-md border border-violet-500/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc4tFE5LnsyIBJloK9Hs-mIqJjswo5sSpRoOrpzBKwpaFhhQebDInEpyrVnrFTR5iK07hAKliAHsfvwWcfj0F_vX5FRJ7JRm1aPg2w7WwI6IHOVcvs5Bx4gEG6MH9ZqgK8ECsj3UDX2rHeU-c-BLgL7-9HRLVj3K1nHwhZNTpDDu8xerFpjOeMlN_zEGfTj_ck-4HTG0uClfU4dZCtQsD1PXZ_xQcUra5Ln6idVosBwnLrNxGhLQVLqQ">
+<div class="flex flex-col">
+<div class="font-display font-black text-lg md:text-xl tracking-tight text-navy-dark flex items-center gap-1.5">
+<span class="">MAXY</span><span class="text-violet-600">AI HUB</span>
+</div>
+<div class="flex items-center gap-1.5 text-[9px] text-slate-500 font-semibold tracking-wide">
+<span class="uppercase font-bold text-navy-dark tracking-wider">MAXY ACADEMY</span>
+<span class="">•</span>
+<span class="text-violet-700 font-bold">HolonIQ SE Asia EdTech 50</span>
+</div>
+</div>
+</a>
+<!-- Fitur 3: Sticky Anchor Menu -->
+<nav class="hidden lg:flex items-center gap-1 p-1 bg-slate-100/80 rounded-xl border border-slate-200/80">
+<a class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 hover:text-navy-dark hover:bg-white transition-all" href="#what-you-get">What You'll Get</a>
+<a class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 hover:text-navy-dark hover:bg-white transition-all" href="#workflows-section">6 Workflows</a>
+<a class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 hover:text-navy-dark hover:bg-white transition-all" href="#curriculum-section">Curriculum</a>
+<a class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 hover:text-navy-dark hover:bg-white transition-all" href="#roi-section">Investment &amp; ROI</a>
+<a class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 hover:text-navy-dark hover:bg-white transition-all" href="#trainer-section">Facilitator</a>
+<a class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 hover:text-navy-dark hover:bg-white transition-all" href="#partners-section">Partners</a>
+<a class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 hover:text-navy-dark hover:bg-white transition-all" href="#faq-section">FAQ</a>
+</nav>
+<!-- CTA Buttons Navbar -->
+<div class="flex items-center gap-3">
+<a class="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-bold text-navy-dark hover:bg-slate-100 border border-slate-200 transition-colors" href="https://wa.me/6282144995255?text=Hello%20MAXY%20AI%20Hub%2C%20I%20want%20to%20inquire%20about%20the%20Agentic%20AI%20Masterclass" target="_blank">
+<span class="material-symbols-outlined text-sm text-emerald-600">chat</span>
+<span class="">Admissions WA</span>
+</a>
+<button class="h-12 px-5 rounded-xl font-display font-bold text-xs md:text-sm tracking-wide bg-amber-brand text-navy-dark hover:bg-amber-dark transition-all transform active:scale-95 shadow-md flex items-center gap-2" onclick="openRegistrationModal('instant')"><span class="">Reserve My Seat</span><span class="material-symbols-outlined text-base">arrow_forward</span></button>
+</div>
+</div>
+</header>
+</div>
+<!-- FLOATING BOTTOM BAR FOR MOBILE (FITUR 1) -->
+<div class="fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md px-4 py-2.5 shadow-[0_-4px_20px_rgba(0,0,0,0.12)] flex items-center justify-between gap-3 border-t border-slate-200 lg:hidden">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5"><span class="text-xs line-through text-slate-400">Rp 3,575,000</span><span class="text-[10px] px-1 rounded font-bold bg-amber-brand text-navy-dark">-30%</span></div>
+<div class="font-display font-bold text-sm text-navy-dark">Rp 2,500,000 <span class="text-[10px] font-normal text-slate-500">/ nett</span></div>
+</div>
+<div class="flex items-center gap-2">
+<a class="p-2.5 rounded-lg border border-slate-300 text-navy-dark" href="https://wa.me/6282144995255?text=Hello%20MAXY%20Admissions%2C%20I%20want%20to%20enroll%20for%20Batch%2007" target="_blank">
+<span class="material-symbols-outlined text-lg text-emerald-600">chat</span>
+</a>
+<button class="h-11 px-4 rounded-lg font-bold text-xs bg-amber-brand text-navy-dark flex items-center gap-1 shadow-md" onclick="openRegistrationModal('instant')">
+<span class="">Reserve My Seat</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- ================= MAIN CONTENT ================= -->
+<main class="w-full pt-28"><!-- Top Main Container with 3/4 (Col 8) and 1/4 (Col 4) Split Layout -->
+<div class="max-w-[1360px] mx-auto px-4 md:px-6 pt-6 pb-20">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- LEFT COLUMN: 8 COLS (MAIN CONTENT STREAM) -->
+<div class="lg:col-span-8 flex flex-col gap-12 w-full">
+<!-- HERO SECTION WITH CYBER/COSMIC NAVY & VIOLET/CYAN NEON GLOW -->
+<section class="rounded-2xl overflow-hidden bg-gradient-to-b from-[#071141] via-[#0A1128] to-[#1E2756] text-white p-6 md:p-10 border border-violet-500/30 shadow-2xl relative" id="hero">
+<div class="absolute top-0 right-0 w-[420px] h-[350px] bg-violet-glow/20 blur-[110px] rounded-full pointer-events-none"></div>
+<div class="absolute bottom-0 left-10 w-[300px] h-[250px] bg-cyan-glow/15 blur-[90px] rounded-full pointer-events-none"></div>
+<div class="flex flex-col gap-5 relative z-10">
+<!-- Eyebrow -->
+<div class="inline-flex items-center gap-2 self-start px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white/10 text-white border border-white/20 backdrop-blur-md"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span><span class="text-white">AGENTIC AI &amp; WORKFLOW AUTOMATION · LEVEL 1 · 2 DAYS · ONSITE JAKARTA</span></div>
+<!-- Headline -->
+<h1 class="font-display font-extrabold text-2xl sm:text-3xl md:text-4xl lg:text-[40px] tracking-tight leading-tight text-white">
+            WALK AWAY WITH <span class="text-amber-brand">6 WORKFLOWS</span> ALREADY RUNNING. NO CODING REQUIRED.
+          </h1>
+<!-- Subheadline -->
+<p class="text-sm sm:text-base text-slate-200 leading-relaxed font-normal">
+            You already use AI, yet customer messages, Instagram leads, and reports still pass through you one by one. In this hands-on class, you build n8n and AI workflows that take that work off your plate, with facilitators beside you.
+          </p>
+<!-- 3 Value Chips -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-1">
+<div class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl bg-white/5 border border-violet-400/20 text-xs font-semibold text-slate-100 backdrop-blur-sm">
+<span class="material-symbols-outlined text-amber-brand text-base">timer</span>
+<span class="">16 hours of hands-on building, not lectures</span>
+</div>
+<div class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl bg-white/5 border border-violet-400/20 text-xs font-semibold text-slate-100 backdrop-blur-sm">
+<span class="material-symbols-outlined text-amber-brand text-base">account_tree</span>
+<span class="">6 workflows built on your own accounts and data</span>
+</div>
+<div class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl bg-white/5 border border-violet-400/20 text-xs font-semibold text-slate-100 backdrop-blur-sm">
+<span class="material-symbols-outlined text-amber-brand text-base">support_agent</span>
+<span class="">Facilitators beside you when you get stuck</span>
+</div>
+</div>
+<!-- Detail Cohort & Location Box -->
+<div class="p-4 rounded-xl bg-white/10 border border-white/15 backdrop-blur-md flex flex-col gap-1.5 text-xs text-slate-200">
+<div class="flex flex-wrap items-center gap-x-3 gap-y-1 font-semibold text-slate-100">
+<span class="text-amber-brand flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-sm">calendar_month</span> Batch 07: March 14–15, 2026
+              </span>
+<span class="">•</span>
+<span class="">2 Full Days (08.30–17.00 WIB)</span>
+<span class="">•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-cyan-glow">location_on</span> MAXY AI Hub, Menara Sentraya 18th Fl, South Jakarta
+              </span>
+</div>
+<p class="text-slate-300 text-[11px] pt-1">
+<strong>Target Audience:</strong> For business owners, founders, and teams in Operations, Customer Service, Marketing, or Business Development who still reply to messages, log leads, and build reports by hand.
+            </p>
+</div>
+<!-- CTAs & Guarantee -->
+<div class="flex flex-col sm:flex-row sm:items-center gap-3 pt-2">
+<button class="h-14 px-8 rounded-xl font-display font-extrabold text-sm tracking-wide bg-amber-brand text-navy-dark hover:bg-amber-dark transition-all transform active:scale-95 shadow-[0_4px_24px_rgba(251,176,65,0.45)] flex items-center justify-center gap-2" onclick="openRegistrationModal('instant')">
+<span class="">Reserve My Seat</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<a class="h-14 px-5 rounded-xl border border-violet-400/30 bg-violet-900/30 hover:bg-violet-900/50 text-white font-semibold text-xs flex items-center justify-center gap-2 transition-all" href="https://wa.me/6282144995255?text=Hello%20MAXY%20Admissions%2C%20I%20would%20like%20to%20consult%20regarding%20the%20Masterclass" target="_blank">
+<span class="material-symbols-outlined text-emerald-400 text-sm">chat</span>
+<span class="">Consult with Admissions WA</span>
+</a>
+</div>
+<!-- Supporting Microcopy -->
+<div class="flex flex-col gap-1 text-xs pt-1 border-t border-white/10">
+<div class="flex items-start gap-1.5 text-cyan-300">
+<span class="material-symbols-outlined text-sm text-emerald-400">verified</span>
+<span class=""><strong>Hands-on Guarantee:</strong> If any of the 6 workflows isn't running by the end of Day 2, a facilitator stays with you until it is.</span>
+</div>
+<div class="flex items-center justify-between text-slate-300 text-[11px] pt-1">
+<span class="">Rp 2,500,000 per participant · lunch, coffee breaks, and certificate included</span>
+<a class="text-amber-brand font-semibold hover:underline" href="#contact-section">Not sure yet? Try the free Level 0 webinar first (1 hour, online) →</a>
+</div>
+</div>
+<!-- HERO BROWSER MOCKUP LIVE PIPELINE -->
+<div class="w-full rounded-2xl bg-[#060D2A] border border-cyan-500/40 p-4 shadow-[0_12px_36px_rgba(0,0,0,0.6)] flex flex-col gap-3 mt-3 relative"><!-- Top Pill Header (Identical to IMAGE_5) -->
+<div class="flex justify-end w-full mb-1">
+  <div class="px-4 py-1.5 rounded-full bg-cyan-deep/30 border border-emerald-400/40 text-emerald-400 font-mono text-xs font-semibold flex items-center gap-2 shadow-sm">
+    <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+    <span class="">6 of 6 workflows live ✓✓✓✓✓✓</span>
+  </div>
+</div>
+
+<!-- Canvas Window Bar: Traffic Lights + Title (Left) and STATUS: 200 OK • LIVE (Right) -->
+<div class="flex flex-wrap items-center justify-between gap-3 pb-3">
+  <div class="flex items-center gap-2.5">
+    <span class="w-3 h-3 rounded-full bg-rose-500 inline-block"></span>
+    <span class="w-3 h-3 rounded-full bg-amber-brand inline-block"></span>
+    <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
+    <span class="ml-2 font-mono text-xs md:text-sm text-slate-100 font-bold tracking-wide">Comment → DM Engine (n8n Production Canvas)</span>
+  </div>
+  <div class="px-3 py-1 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-mono text-[10px] md:text-xs font-semibold tracking-wider">
+    STATUS: 200 OK ● LIVE
+  </div>
+</div>
+
+<!-- 5 Production Nodes Flow: Exactly matching IMAGE_5 -->
+<div class="grid grid-cols-2 sm:grid-cols-5 gap-3 items-stretch text-center py-2">
+  <!-- Node 1: New comment -->
+  <div class="p-3.5 rounded-xl bg-white/5 border border-cyan-500/40 flex flex-col items-center justify-center gap-1.5 transition-all shadow-sm">
+    <span class="material-symbols-outlined text-cyan-glow text-xl">chat_bubble_outline</span>
+    <span class="text-xs font-bold text-white leading-tight">New comment</span>
+    <span class="text-[10px] font-mono text-slate-400">IG Webhook</span>
+  </div>
+
+  <!-- Node 2: Detect keyword -->
+  <div class="p-3.5 rounded-xl bg-white/5 border border-cyan-500/40 flex flex-col items-center justify-center gap-1.5 transition-all shadow-sm">
+    <span class="material-symbols-outlined text-cyan-glow text-xl">filter_alt</span>
+    <span class="text-xs font-bold text-white leading-tight">Detect keyword</span>
+    <span class="text-[10px] font-mono text-slate-400">Match: 'PRICE'</span>
+  </div>
+
+  <!-- Node 3: AI writes reply (Glowing Amber/Gold Highlight) -->
+  <div class="p-3.5 rounded-xl bg-amber-brand/15 border-2 border-amber-brand flex flex-col items-center justify-center gap-1.5 shadow-[0_0_20px_rgba(251,176,65,0.35)] transition-all">
+    <span class="material-symbols-outlined text-amber-brand text-xl">psychology</span>
+    <span class="text-xs font-bold text-amber-300 leading-tight">AI writes reply</span>
+    <span class="text-[10px] font-mono text-amber-200 font-medium">Claude 3.5</span>
+  </div>
+
+  <!-- Node 4: Send DM -->
+  <div class="p-3.5 rounded-xl bg-white/5 border border-violet-400/40 flex flex-col items-center justify-center gap-1.5 transition-all shadow-sm">
+    <span class="material-symbols-outlined text-violet-400 text-xl">send</span>
+    <span class="text-xs font-bold text-white leading-tight">Send DM</span>
+    <span class="text-[10px] font-mono text-slate-400">Direct Msg</span>
+  </div>
+
+  <!-- Node 5: Save lead -->
+  <div class="p-3.5 rounded-xl bg-white/5 border border-emerald-500/40 flex flex-col items-center justify-center gap-1.5 transition-all shadow-sm">
+    <span class="material-symbols-outlined text-emerald-400 text-xl">grid_view</span>
+    <span class="text-xs font-bold text-white leading-tight">Save lead</span>
+    <span class="text-[10px] font-mono text-slate-400">Google Sheets</span>
+  </div>
+</div>
+
+<!-- Output Execution Terminal Log Box (Identical to IMAGE_5) -->
+<div class="rounded-xl bg-black/80 p-3.5 border border-white/10 font-mono text-[11px] md:text-xs leading-relaxed flex flex-col sm:flex-row sm:items-center justify-between gap-3 mt-1 shadow-inner">
+  <div class="space-y-1 text-slate-300">
+    <div class="flex items-start gap-1.5">
+      <span class="text-emerald-400 font-bold select-none">&gt;</span>
+      <span class=""><span class="text-emerald-400 font-semibold">New lead saved to Google Sheets:</span> "budi@growthco.id" · Intent: High Value (Score: 94/100)</span>
+    </div>
+    <div class="flex items-start gap-1.5">
+      <span class="text-cyan-glow font-bold select-none">&gt;</span>
+      <span class=""><span class="text-cyan-glow font-semibold">Instant DM Dispatched:</span> "Hi Budi! Level 1 curriculum has been sent..." (Executed in 310ms)</span>
+    </div>
+  </div>
+  <span class="self-end sm:self-center px-3 py-1 rounded bg-emerald-500/20 text-emerald-300 font-bold border border-emerald-500/40 text-[10px] md:text-xs tracking-wide shadow-sm">
+    Verified
+  </span>
+</div></div>
+</div>
+</section>
+<!-- WHAT YOU'LL GET SECTION (FROM FLYER IMAGE_14 & DOCUMENT_13) -->
+<section class="p-6 md:p-8 rounded-2xl bg-gradient-to-br from-navy-dark via-[#0F1746] to-[#1A1852] text-white border border-violet-500/30 shadow-lg relative overflow-hidden" id="what-you-get">
+<div class="absolute -right-10 -bottom-10 w-60 h-60 bg-violet-600/20 blur-3xl pointer-events-none"></div>
+<div class="flex flex-col gap-2 mb-6">
+<span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-violet-500/20 text-violet-300 self-start border border-violet-500/30">Mastering AI Agentic Automation</span>
+<h2 class="font-display font-extrabold text-xl md:text-2xl text-white">WHAT YOU'LL GET</h2>
+<p class="text-slate-300 text-xs md:text-sm">From manual to autonomous: build systems that think, act, and scale without expanding team overhead.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="p-4 rounded-xl bg-white/5 border border-white/10 flex items-start gap-3">
+<div class="w-8 h-8 rounded-lg bg-cyan-glow/20 text-cyan-glow flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-lg">sync_alt</span>
+</div>
+<div>
+<h4 class="font-bold text-sm text-white">Connect systems to eliminate manual data entry.</h4>
+<p class="text-xs text-slate-300 mt-1">Seamlessly bind your CRM, messaging apps, and databases into a single autonomous loop.</p>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-white/5 border border-white/10 flex items-start gap-3">
+<div class="w-8 h-8 rounded-lg bg-amber-brand/20 text-amber-brand flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-lg">trending_down</span>
+</div>
+<div>
+<h4 class="font-bold text-sm text-white">Reduce manual work by up to 80%.</h4>
+<p class="text-xs text-slate-300 mt-1">Free up valuable executive and operational hours from repetitive typing and copy-pasting.</p>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-white/5 border border-white/10 flex items-start gap-3">
+<div class="w-8 h-8 rounded-lg bg-violet-400/20 text-violet-400 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-lg">headset_mic</span>
+</div>
+<div>
+<h4 class="font-bold text-sm text-white">24/7 AI support with human escalation.</h4>
+<p class="text-xs text-slate-300 mt-1">Provide lightning-fast resolution at midnight while smartly escalating edge cases to humans.</p>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-white/5 border border-white/10 flex items-start gap-3">
+<div class="w-8 h-8 rounded-lg bg-emerald-400/20 text-emerald-400 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-lg">rocket_launch</span>
+</div>
+<div>
+<h4 class="font-bold text-sm text-white">Achieve 87% growth without expanding your team.</h4>
+<p class="text-xs text-slate-300 mt-1">Scale throughput, inquiries, and transaction reconciliations without multiplying payroll costs.</p>
+</div>
+</div>
+</div>
+<!-- Autonomous Agents Live Status Table & Tool Ecosystem -->
+<div class="mt-6 pt-6 border-t border-white/10 grid grid-cols-1 lg:grid-cols-2 gap-6">
+<!-- Live Status Table -->
+<div class="p-4 rounded-xl bg-black/40 border border-white/10">
+<div class="flex items-center justify-between pb-2 mb-2 border-b border-white/10 text-xs">
+<span class="font-mono font-bold text-cyan-glow uppercase text-[10px]">Autonomous Agents Engine</span>
+<span class="font-mono text-emerald-400 text-[10px] font-bold">ALL SYSTEMS LIVE</span>
+</div>
+<div class="space-y-1.5 text-xs font-mono">
+<div class="flex justify-between items-center py-1 border-b border-white/5"><span class="text-slate-300">Data Collector</span><span class="text-emerald-400 font-bold text-[11px]">● RUNNING</span></div>
+<div class="flex justify-between items-center py-1 border-b border-white/5"><span class="text-slate-300">Insight Analyzer</span><span class="text-emerald-400 font-bold text-[11px]">● RUNNING</span></div>
+<div class="flex justify-between items-center py-1 border-b border-white/5"><span class="text-slate-300">Decision Engine</span><span class="text-emerald-400 font-bold text-[11px]">● RUNNING</span></div>
+<div class="flex justify-between items-center py-1 border-b border-white/5"><span class="text-slate-300">Task Executor</span><span class="text-emerald-400 font-bold text-[11px]">● RUNNING</span></div>
+<div class="flex justify-between items-center py-1 border-b border-white/5"><span class="text-slate-300">Report Generator</span><span class="text-emerald-400 font-bold text-[11px]">● RUNNING</span></div>
+<div class="flex justify-between items-center py-1"><span class="text-slate-300">System Monitor</span><span class="text-emerald-400 font-bold text-[11px]">● RUNNING</span></div>
+</div>
+</div>
+<!-- Tool Ecosystem -->
+<div class="p-4 rounded-xl bg-white/5 border border-white/10 flex flex-col justify-between">
+<div>
+<span class="font-mono text-violet-300 font-bold text-[10px] uppercase block mb-1">Production AI Stack &amp; Tool Ecosystem</span>
+<h4 class="font-bold text-sm text-white">Orchestrated with Industry Leaders</h4>
+<p class="text-xs text-slate-300 mt-1">Connect modern foundational LLMs directly to your operational toolchain via visual nodes.</p>
+</div>
+<div class="flex flex-wrap gap-2 pt-3">
+<span class="px-2.5 py-1 rounded-lg bg-white/10 border border-white/15 text-[11px] font-semibold text-slate-200">n8n Workflow</span>
+<span class="px-2.5 py-1 rounded-lg bg-white/10 border border-white/15 text-[11px] font-semibold text-slate-200">Claude (Anthropic)</span>
+<span class="px-2.5 py-1 rounded-lg bg-white/10 border border-white/15 text-[11px] font-semibold text-slate-200">OpenAI GPT-4o</span>
+<span class="px-2.5 py-1 rounded-lg bg-white/10 border border-white/15 text-[11px] font-semibold text-slate-200">Meta API</span>
+<span class="px-2.5 py-1 rounded-lg bg-white/10 border border-white/15 text-[11px] font-semibold text-slate-200">Instagram API</span>
+<span class="px-2.5 py-1 rounded-lg bg-white/10 border border-white/15 text-[11px] font-semibold text-slate-200">Google Sheets</span>
+<span class="px-2.5 py-1 rounded-lg bg-white/10 border border-white/15 text-[11px] font-semibold text-slate-200">Gmail</span>
+<span class="px-2.5 py-1 rounded-lg bg-white/10 border border-white/15 text-[11px] font-semibold text-slate-200">Gemini</span>
+</div>
+</div>
+</div>
+</section>
+<!-- PARTNER / MITRA CAROUSEL WITH LOGOS -->
+<section class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm" id="partners-section">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-4">
+<div>
+<span class="text-[11px] font-bold text-cyan-deep tracking-wider uppercase">Partnership &amp; Accreditation Ecosystem</span>
+<h2 class="font-display font-bold text-lg text-navy-dark">Trusted by Leading Professionals &amp; Enterprises</h2>
+</div>
+<div class="flex items-center gap-1 text-xs">
+<button class="px-2.5 py-1 rounded-lg bg-navy-dark text-white font-bold transition-all partner-filter-btn" id="filter-all" onclick="filterPartners('all')">All</button>
+<button class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-600 font-medium hover:bg-slate-200 transition-all partner-filter-btn" id="filter-enterprise" onclick="filterPartners('enterprise')">Enterprise</button>
+<button class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-600 font-medium hover:bg-slate-200 transition-all partner-filter-btn" id="filter-tech" onclick="filterPartners('tech')">Tech Unicorns</button>
+</div>
+</div>
+<div class="relative w-full py-3 border-y border-slate-100 select-none overflow-x-auto hide-scrollbar cursor-grab active:cursor-grabbing" id="partner-carousel-container">
+<div class="flex items-center gap-6 whitespace-nowrap animate-marquee hover:[animation-play-state:paused] transition-all" id="partner-marquee" style="animation-play-state: running;"><div class="partner-item enterprise inline-flex items-center gap-2.5 text-slate-800 font-display font-bold text-xs md:text-sm px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200/80 shadow-sm"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy-w2th_NkukECb4kvzbAwNfNIz6bIcKqT-qUwNgZEp1shLK6zbf3YYApYyiYWNJxMLm9WMcsBzm4V4rrnGgLyZ3d9WpRZyFdT072AehN24y5hXgsN-d_xv19W7GQOzZo9Fkv0iCKt3o44p2ecXiA0KcFbzFyFRLWj4iHsVGu5GJTRDoIbwgCrnBbxiElEtQZvR3FyD7cI2C9n5Qko3UFwOO_D3JK2uownoZ4NvlRqpgGljcYbovkf9Q" alt="Bank Mandiri" class="h-7 w-auto object-contain flex-shrink-0"><span class=""><br></span></div><div class="partner-item enterprise inline-flex items-center gap-2.5 text-slate-800 font-display font-bold text-xs md:text-sm px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200/80 shadow-sm"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0xe-iqcf2G23ohqpXIwbf-lD1wpOlYIfpaGlFe6JVJk7fds5wueQCt0hp7Ug8UZiRP2JvRRq-yKzphlTi4VCWL9kGoyDwSTzmPAwBCQubgcRF1D43171fPfpAWKruNNeSaChY7SF3av84vUEJDnHpoX8h62Yf9t_UdyRl2Ee5Nlw_KL9VD6RMKLKl9fmDsW6KPoW3fj-s4HQ_-Ud6XQDjV3X3SzBWKnHHY60rKfCKAlBA8HuLM-6kKw" alt="Telkomsel" class="h-7 w-auto object-contain flex-shrink-0"><span class=""><br></span></div><div class="partner-item tech inline-flex items-center gap-2.5 text-slate-800 font-display font-bold text-xs md:text-sm px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200/80 shadow-sm"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIRpjSwl_oB0aAhIiPJqpnjGSxpHLPSXdru76PCLsoRILcqnLI8mnCTe9IUxU9TNOEOjlSvzjtLnttjtpEHIk5e-Donu5gMCZvp1CvncNVTCQOTY4niN1pVNC-fqud4fcked7js5x6q5wY_uDzu1XdIuBzeGkKedlm0lWWba5FVrsqMlidfclE5Zh09UBftUaSZj2gByZuPLJ85JWZIczZ5lXVzeYrIRvwUq_6bClkFTLWoaYVUnfQtw" alt="Tokopedia" class="h-7 w-auto object-contain flex-shrink-0"><span class=""><br></span></div><div class="partner-item tech inline-flex items-center gap-2.5 text-slate-800 font-display font-bold text-xs md:text-sm px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200/80 shadow-sm"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRSjoTXOvIw_9GAnbQwi19lXqouuKQDIklnhoJDhyo21H6B33TguVSelVtcgfAM4v6rtt3fYI4sfURA_Zve-ShZDlge6vkJmwuZkuQN_OkFh_N4eCAlC1ILVgxc_Et_yueK-OqXsGQthg6NeqOmea3atleW5rKlVD1-lcf_uwpAjOq-rjppaDdBD3F-cNxf7WoKSwoGrqBKGQHmKpZ_Hn7t5amXbBkKEkjh_gaBbI6Sg0urAuTng-HlA" alt="Gojek" class="h-6 w-auto object-contain flex-shrink-0"><span class=""><br></span></div><div class="partner-item tech inline-flex items-center gap-2.5 text-slate-800 font-display font-bold text-xs md:text-sm px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200/80 shadow-sm"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy0eu93jNp8IIxnhT3GbiKInRQj1S2WlzXQtVrQg4a2jlVRtc2PXcYHnbb7RO60UCUvYSXx2XS2_F_Bb7HYM03f1dpLcFdalKd6BTUDwD1sSLY9DWiT8LGdb9phhXuR5qWD2deTI2YkzNtFdtLRx6AJQdG0xe5-1PlfRdkuW72K5STVZH1aBt1xaxNVAMpo-1bGcfVeLpCX7BJavEwBx4p2bFdXPn57nUiAdG7m0w-h2MPtAR8uktsgw" alt="Bukalapak" class="h-6 w-auto object-contain flex-shrink-0"><span class=""><br></span></div><div class="partner-item enterprise inline-flex items-center gap-2.5 text-slate-800 font-display font-bold text-xs md:text-sm px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200/80 shadow-sm"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUaj-zsqT29Ct62wgwbljGs1W8hJVRB_cI7ezPdLY4nWIeFwUcCHjVhcD7fotrhfOiYHFu-R3ucw-mD4q2SbRNQYT8-fYwkLMBg-vpML0McHmF3Q-fT-1zGQfFZFot2g19z3CZRKO0ccRNpkC0OErmg7qjir_5qs055tjM3K01947le0iopxHst_bCEJpO00CpngkV6WLZPPR9Rf3_WPZnMtL6_HYto3ZErm0SL5Z0L8BD675LSbkOTw" alt="Astra International" class="h-7 w-auto object-contain flex-shrink-0"><span class=""><br></span></div><div class="partner-item tech inline-flex items-center gap-2.5 text-slate-800 font-display font-bold text-xs md:text-sm px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200/80 shadow-sm"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjRJkZpHkKDLKgwnSnHzJY5f7q7Zgc9erI1ORqoohfFiDlTr4lvrhBAglBYnPhYuJfqMIjWwi6wD4volIuS-iN8rDDQB7_B8PjVgN4lWWx4McoKtsT0yzW-UmNeWkzTLsMppbphTlvqDcYhaaynTzQjVjGo5_yZOG7ibgBuQINUzoqUEqZV0ToF0GNgBwE-KWHn-iGpMn5M733YI86H5yF4bfArfOpaqV7B_69JTMMCSC2yo2gvN52jw" alt="HolonIQ" class="h-7 w-auto object-contain flex-shrink-0 rounded"><span class=""><br></span></div></div>
+</div>
+</section>
+<!-- PAIN POINT VS AGENTIC AI MATRIX -->
+<section class="p-6 md:p-8 rounded-2xl bg-white border border-slate-200 shadow-sm">
+<div class="flex flex-col gap-1 mb-6">
+<span class="text-xs font-bold text-cyan-deep uppercase tracking-wider">Problem vs. Solution</span>
+<h2 class="font-display font-extrabold text-xl md:text-2xl text-navy-dark">Already Using AI, Yet Routine Work Still Relies on You Manually?</h2>
+<p class="text-slate-600 text-xs md:text-sm">You shouldn't have to spend your evenings copy-pasting numbers and answering the same inquiry 40 times.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="p-5 rounded-xl bg-rose-500/5 border border-rose-500/20 flex flex-col gap-3">
+<div class="flex items-center gap-2 text-rose-600 font-bold text-sm">
+<span class="material-symbols-outlined text-lg">cancel</span> Conventional Approach (Exhausting &amp; Leaky)
+            </div>
+<ul class="flex flex-col gap-2.5 text-xs text-slate-600">
+<li class="flex items-start gap-2"><span class="">❌</span> <span class="">Customer messages and inquiries piling up while admins type replies one by one until late at night.</span></li>
+<li class="flex items-start gap-2"><span class="">❌</span> <span class="">Instagram leads slip away into the void because your sales team takes 4 hours to follow up.</span></li>
+<li class="flex items-start gap-2"><span class="">❌</span> <span class="">Weekly executive reports compiled by hand from disconnected spreadsheets every single Friday evening.</span></li>
+<li class="flex items-start gap-2"><span class="">❌</span> <span class="">Engineering teams don't have time to build internal tools for you, leaving ops stuck with manual labor.</span></li>
+</ul>
+</div>
+<div class="p-5 rounded-xl bg-emerald-500/5 border border-emerald-500/20 flex flex-col gap-3">
+<div class="flex items-center gap-2 text-emerald-600 font-bold text-sm">
+<span class="material-symbols-outlined text-lg">check_circle</span> With Agentic n8n Automation (Autonomous)
+            </div>
+<ul class="flex flex-col gap-2.5 text-xs text-slate-700 font-medium">
+<li class="flex items-start gap-2"><span class="">✓</span> <span class=""><strong>6 routine workflows running autonomously</strong>, two days from now on your own live business accounts.</span></li>
+<li class="flex items-start gap-2"><span class="">✓</span> <span class="">WhatsApp Agent references live stock &amp; contextual PDF catalogs 24/7 without missing a beat.</span></li>
+<li class="flex items-start gap-2"><span class="">✓</span> <span class="">AI Vision extracts vendor invoices and reconciles ledgers in seconds without human transcription.</span></li>
+<li class="flex items-start gap-2"><span class="">✓</span> <span class="">High-intent leads routed to senior reps' private WhatsApp within &lt;10 seconds of form submission.</span></li>
+</ul>
+</div>
+</div>
+</section>
+<!-- 6 WORKFLOWS INTERACTIVE VISUALIZER -->
+<section class="p-6 md:p-8 rounded-2xl bg-white border border-slate-200 shadow-sm" id="workflows-section">
+<div class="flex flex-col gap-2 mb-6">
+<span class="text-xs font-bold text-cyan-deep tracking-wider uppercase">Interactive Blueprint Visualizer</span>
+<h2 class="font-display font-extrabold text-xl md:text-2xl text-navy-dark tracking-tight">
+            6 Production Workflows You Will Build &amp; Deploy
+          </h2>
+<p class="text-slate-600 text-xs md:text-sm">
+            Click through each workflow to inspect the live n8n node orchestrations, trigger payloads, and operational outputs built during the masterclass.
+          </p>
+</div>
+<!-- Tab Selector -->
+<div class="flex items-center gap-2 overflow-x-auto pb-3 hide-scrollbar border-b border-slate-200">
+<button class="wf-tab active whitespace-nowrap px-3.5 py-2 rounded-xl font-bold text-xs bg-navy-dark text-white flex items-center gap-2 transition-all shadow-sm" id="wf-tab-1" onclick="selectWorkflow(1)">
+<span class="w-5 h-5 rounded-full bg-amber-brand text-navy-dark flex items-center justify-center text-[10px]">1</span>
+<span class="">CS AI Agent</span>
+</button>
+<button class="wf-tab whitespace-nowrap px-3.5 py-2 rounded-xl font-bold text-xs bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 flex items-center gap-2 transition-all" id="wf-tab-2" onclick="selectWorkflow(2)">
+<span class="w-5 h-5 rounded-full bg-slate-200 text-slate-700 flex items-center justify-center text-[10px]">2</span>
+<span class="">IG Lead Capture</span>
+</button>
+<button class="wf-tab whitespace-nowrap px-3.5 py-2 rounded-xl font-bold text-xs bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 flex items-center gap-2 transition-all" id="wf-tab-3" onclick="selectWorkflow(3)">
+<span class="w-5 h-5 rounded-full bg-slate-200 text-slate-700 flex items-center justify-center text-[10px]">3</span>
+<span class="">Executive Digest</span>
+</button>
+<button class="wf-tab whitespace-nowrap px-3.5 py-2 rounded-xl font-bold text-xs bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 flex items-center gap-2 transition-all" id="wf-tab-4" onclick="selectWorkflow(4)">
+<span class="w-5 h-5 rounded-full bg-slate-200 text-slate-700 flex items-center justify-center text-[10px]">4</span>
+<span class="">Revenue Ops</span>
+</button>
+<button class="wf-tab whitespace-nowrap px-3.5 py-2 rounded-xl font-bold text-xs bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 flex items-center gap-2 transition-all" id="wf-tab-5" onclick="selectWorkflow(5)">
+<span class="w-5 h-5 rounded-full bg-slate-200 text-slate-700 flex items-center justify-center text-[10px]">5</span>
+<span class="">Invoice OCR</span>
+</button>
+<button class="wf-tab whitespace-nowrap px-3.5 py-2 rounded-xl font-bold text-xs bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 flex items-center gap-2 transition-all" id="wf-tab-6" onclick="selectWorkflow(6)">
+<span class="w-5 h-5 rounded-full bg-slate-200 text-slate-700 flex items-center justify-center text-[10px]">6</span>
+<span class="">Lead Router</span>
+</button>
+</div>
+<!-- Card details -->
+<div class="mt-5 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-cyan-soft text-cyan-deep border border-cyan-200 uppercase" id="wf-badge">Workflow 01 • Customer Support Ops</span>
+<span class="flex items-center gap-1 text-[11px] font-bold text-emerald-600"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Production Ready</span>
+</div>
+<h3 class="font-display font-extrabold text-lg text-navy-dark" id="wf-title">Contextual Customer Support Agent 24/7</h3>
+<p class="text-slate-600 text-xs leading-relaxed" id="wf-desc">Deploy an AI agent connected to WhatsApp Business &amp; live web chat. It ingests your company catalog, checks shipment tracking codes, and smoothly escalates nuanced inquiries to human reps.</p>
+<div class="grid grid-cols-2 gap-2 p-3 rounded-xl bg-slate-50 border border-slate-200 text-[11px]">
+<div><span class="text-slate-400 block text-[9px] uppercase font-bold">Trigger Node</span><span class="font-bold text-navy-dark" id="wf-trigger">WhatsApp Webhook</span></div>
+<div><span class="text-slate-400 block text-[9px] uppercase font-bold">Core Logic</span><span class="font-bold text-navy-dark" id="wf-core">OpenAI + RAG Vector DB</span></div>
+<div><span class="text-slate-400 block text-[9px] uppercase font-bold">Output</span><span class="font-bold text-navy-dark" id="wf-output">Sheets CRM + Instant WA</span></div>
+<div><span class="text-slate-400 block text-[9px] uppercase font-bold">Efficiency</span><span class="font-bold text-emerald-600" id="wf-saving">Cuts 85% of Support Volume</span></div>
+</div>
+<button class="self-start px-4 py-2 rounded-xl font-bold text-xs bg-navy-dark text-white hover:bg-primary-container transition-all flex items-center gap-1.5" onclick="inspectBlueprint(currentWfId)">
+<span class="material-symbols-outlined text-sm text-amber-brand">zoom_in</span>
+<span class="">Inspect Blueprint Fullscreen</span>
+</button>
+</div>
+<div class="p-4 rounded-xl bg-navy-dark text-white border border-slate-800 flex flex-col gap-2">
+<div class="flex items-center justify-between text-xs pb-1 border-b border-white/10">
+<span class="font-mono text-cyan-glow text-[11px]">Live Node Pipeline</span>
+<span class="text-slate-400 font-mono text-[10px]" id="wf-nodes-count">4 Connected Nodes</span>
+</div>
+<div class="py-3 flex items-center justify-center gap-2 text-center text-xs">
+<div class="px-2 py-1 rounded bg-white/10 border border-cyan-glow/50 text-[10px] font-mono">[1] Webhook</div>
+<span class="text-amber-brand text-xs font-bold">→</span>
+<div class="px-2 py-1 rounded bg-amber-brand/20 border border-amber-brand text-amber-300 text-[10px] font-mono">[2] LLM Agent</div>
+<span class="text-amber-brand text-xs font-bold">→</span>
+<div class="px-2 py-1 rounded bg-emerald-500/20 border border-emerald-400 text-emerald-300 text-[10px] font-mono">[3] Notify</div>
+</div>
+<pre class="rounded-lg bg-black/60 p-2.5 text-[10px] font-mono text-slate-300 whitespace-pre-wrap leading-tight" id="wf-json-snippet">{
+  "event": "whatsapp_incoming",
+  "intent": "check_catalog_and_price",
+  "ai_agent_status": "executed_successfully",
+  "response_time": "310ms"
+}</pre>
+</div>
+</div>
+</section>
+<!-- INTERACTIVE ROI CALCULATOR -->
+<section class="p-6 md:p-8 rounded-2xl bg-white border border-slate-200 shadow-sm" id="roi-section">
+<div class="flex flex-col gap-1 mb-5">
+<span class="text-xs font-bold text-cyan-deep tracking-wider uppercase">Interactive Business Case &amp; ROI</span>
+<h2 class="font-display font-extrabold text-xl md:text-2xl text-navy-dark tracking-tight">Calculate Time &amp; Cost Saved by Your Team</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center p-5 rounded-xl bg-slate-50 border border-slate-200">
+<div class="flex flex-col gap-4">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-xs font-bold">
+<span class="text-navy-dark">Manual Hours / Staff / Week:</span>
+<span class="px-2 py-0.5 rounded bg-navy-dark text-white font-mono text-xs" id="calc-hours-val">15 Hours</span>
+</div>
+<input class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#FBB041]" id="calc-hours-input" max="40" min="5" oninput="runROICalculation()" step="1" type="range" value="15">
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-xs font-bold">
+<span class="text-navy-dark">Team Members Affected:</span>
+<span class="px-2 py-0.5 rounded bg-navy-dark text-white font-mono text-xs" id="calc-members-val">3 People</span>
+</div>
+<input class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#FBB041]" id="calc-members-input" max="10" min="1" oninput="runROICalculation()" step="1" type="range" value="3">
+</div>
+<p class="text-[11px] text-slate-500">Based on conservative 70% repetitive task elimination via n8n. Standard blended benchmark rate: Rp 125,000/hr.</p>
+</div>
+<div class="p-5 rounded-xl bg-navy-dark text-white flex flex-col gap-3 shadow-lg">
+<div>
+<span class="text-[10px] uppercase text-slate-400 font-bold">Monthly Hours Reclaimed:</span>
+<div class="font-display font-black text-2xl md:text-3xl text-white"><span class="" id="res-hours">126</span> <span class="text-xs text-amber-brand font-medium">Hours / Month</span></div>
+</div>
+<div class="pt-2 border-t border-white/10">
+<span class="text-[10px] uppercase text-slate-400 font-bold">Estimated Monthly Payroll Value:</span>
+<div class="font-display font-black text-xl md:text-2xl text-emerald-400 font-mono" id="res-rupiah">Rp 15.750.000</div>
+</div>
+<div class="text-[10px] text-amber-brand flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-xs">check_circle</span> Break-even within &lt; 14 Working Days
+            </div>
+</div>
+</div>
+</section>
+<!-- 2-DAY SYLLABUS -->
+<section class="p-6 md:p-8 rounded-2xl bg-white border border-slate-200 shadow-sm" id="curriculum-section">
+<div class="flex flex-col gap-1 mb-5">
+<span class="text-xs font-bold text-cyan-deep tracking-wider uppercase">Syllabus Breakdown</span>
+<h2 class="font-display font-extrabold text-xl md:text-2xl text-navy-dark tracking-tight">Your 2-Day Executive Masterclass Journey</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="p-5 rounded-xl bg-slate-50 border border-slate-200 flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-bold text-navy-dark text-sm">Day 1 – Foundations &amp; Workflows 1–3</span>
+<span class="text-[10px] font-bold px-2 py-0.5 rounded bg-cyan-soft text-cyan-deep">3 Workflows Live</span>
+</div>
+<ul class="flex flex-col gap-2 text-xs text-slate-600">
+<li class="">• <strong>Session 1:</strong> Foundations, n8n visual flow canvas, API keys self-setup.</li>
+<li class="">• <strong>Session 2:</strong> Workflow 01 (Contextual Customer Support Agent 24/7).</li>
+<li class="">• <strong>Session 3:</strong> Workflow 02 (IG DM Lead Capture) &amp; Workflow 03 (Automated Scheduled Executive Report).</li>
+</ul>
+</div>
+<div class="p-5 rounded-xl bg-slate-50 border border-slate-200 flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-bold text-navy-dark text-sm">Day 2 – Advanced Multi-Node Workflows 4–6</span>
+<span class="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-50 text-amber-dark">Final Certification</span>
+</div>
+<ul class="flex flex-col gap-2 text-xs text-slate-600">
+<li class="">• <strong>Session 4:</strong> Workflow 04 (Real-Time Operations &amp; Revenue Dashboard).</li>
+<li class="">• <strong>Session 5:</strong> Workflow 05 (Document &amp; Invoice PDF Vision OCR Extractor).</li>
+<li class="">• <strong>Session 6:</strong> Workflow 06 (Instant High-Ticket Lead Router) &amp; Live Deployment Check.</li>
+</ul>
+</div>
+</div>
+<div class="mt-4 text-center">
+<button class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-navy-dark text-white text-xs font-bold hover:bg-primary-container transition-all" onclick="triggerSilabusDownload()">
+<span class="material-symbols-outlined text-amber-brand text-sm">download</span>
+<span class="">Download Full Syllabus (PDF 12 Pages)</span>
+</button>
+</div>
+</section>
+<!-- TRAINER & TESTIMONIALS -->
+<section class="p-6 md:p-8 rounded-2xl bg-white border border-slate-200 shadow-sm" id="trainer-section">
+<div class="p-6 rounded-xl bg-gradient-to-r from-navy-dark via-[#0E1C52] to-violet-950 text-white flex flex-col sm:flex-row items-center gap-5 mb-6 border border-violet-500/30">
+<img alt="Rina Isna Sukoco, M.Sc." class="w-24 h-24 rounded-2xl object-cover ring-2 ring-amber-brand flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiukyQxlfIqTwGlJ-hhZbfL32k_dEZC7-jnvwbZCnYw5mjiiHz4oBsXcHMyQjHFIz0szniCj60jFXIfrZ8J6dpWu0Ip_-tAnSU16gFFwAVJMEQjEdZ4sR1VDTlhr1zdqDL99QXCTvV10ISUjhwnABQNjXZkN1V_7yn8d0edl6Hyr48rRbOpKL4WqZnoUdZtsKu_XwqujHzZYYz1JdLOvDF8P-aRZNByN3cEIgimJFs">
+<div class="flex flex-col gap-1.5 text-center sm:text-left">
+<div class="flex items-center justify-center sm:justify-start gap-2">
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-brand text-navy-dark">Lead Facilitator</span>
+<span class="text-[11px] text-slate-300">10+ Years AI &amp; Automation Practitioner</span>
+</div>
+<h3 class="font-display font-bold text-lg text-white">Rina Isna Sukoco, M.Sc.</h3>
+<p class="text-xs text-slate-300 leading-relaxed">Head of AI Engineering at MAXY Academy. Spearheading enterprise automation workflows processing 400,000+ monthly n8n executions across retail, SaaS, and financial operations.</p>
+</div>
+</div>
+<!-- Testimonials -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs flex flex-col justify-between gap-3">
+<p class="text-slate-600 italic">“The facilitators stayed right by my side until our WhatsApp webhook and lead pipeline were firing without a glitch. The best hands-on class I've attended.”</p>
+<span class="font-bold text-navy-dark">Harumihasna Haura — Operations Lead, Retail Brand</span>
+</div>
+<div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs flex flex-col justify-between gap-3">
+<p class="text-slate-600 italic">“Workflow 5 Invoice OCR was put to production the very next Monday. It reduced our finance reconciliation turnaround by 80% immediately.”</p>
+<span class="font-bold text-navy-dark">Dimas Aditya — Co-Founder, B2B Logistics Tech</span>
+</div>
+</div>
+</section>
+<!-- FAQ ACCORDION (ALL 5 QUESTIONS FROM PBL OUTLINE) -->
+<section class="p-6 md:p-8 rounded-2xl bg-white border border-slate-200 shadow-sm" id="faq-section">
+<div class="flex flex-col gap-1 mb-5">
+<span class="text-xs font-bold text-cyan-deep tracking-wider uppercase">Got Questions?</span>
+<h2 class="font-display font-extrabold text-xl text-navy-dark">Frequently Asked Questions</h2>
+</div>
+<div class="flex flex-col gap-2.5">
+<div class="rounded-xl bg-slate-50 border border-slate-200 overflow-hidden"><button class="w-full p-3.5 text-left flex items-center justify-between gap-3 font-display font-bold text-xs md:text-sm text-navy-dark" onclick="toggleFaq(1)"><span class="">1. Is this program accessible to professionals without a technical or coding background?</span><span class="material-symbols-outlined text-slate-400 text-base" id="faq-icon-1">expand_more</span></button><div class="px-4 pb-3.5 text-xs text-slate-600 leading-relaxed hidden border-t border-slate-200/80 pt-2.5" id="faq-body-1">Yes. The entire curriculum utilizes an intuitive visual no-code platform. Participants from diverse functional domains. Receive hands-on guidance from professional facilitators until your automated workflows are fully operational.</div></div>
+<div class="rounded-xl bg-slate-50 border border-slate-200 overflow-hidden"><button class="w-full p-3.5 text-left flex items-center justify-between gap-3 font-display font-bold text-xs md:text-sm text-navy-dark" onclick="toggleFaq(2)"><span class="">2. What is the strategic advantage of AI Agents compared to conventional Large Language Models (LLMs)?</span><span class="material-symbols-outlined text-slate-400 text-base" id="faq-icon-2">expand_more</span></button><div class="px-4 pb-3.5 text-xs text-slate-600 leading-relaxed hidden border-t border-slate-200/80 pt-2.5" id="faq-body-2">Conventional AI models require repetitive manual prompting for every discrete task. Conversely, AI Agents operate as integrated autonomous systems capable of interconnecting enterprise applications to execute complex and multi-step business processes ranging from data management to report distribution independently.</div></div>
+<div class="rounded-xl bg-slate-50 border border-slate-200 overflow-hidden"><button class="w-full p-3.5 text-left flex items-center justify-between gap-3 font-display font-bold text-xs md:text-sm text-navy-dark" onclick="toggleFaq(3)"><span class="">3. Are participants required to purchase paid third-party AI software subscriptions?</span><span class="material-symbols-outlined text-slate-400 text-base" id="faq-icon-3">expand_more</span></button><div class="px-4 pb-3.5 text-xs text-slate-600 leading-relaxed hidden border-t border-slate-200/80 pt-2.5" id="faq-body-3">No. All training modules are comprehensively optimized to operate seamlessly using standard free-tier accounts. Technical guidelines and initial account configuration instructions are provided via pre-class onboarding documentation.</div></div>
+<div class="rounded-xl bg-slate-50 border border-slate-200 overflow-hidden"><button class="w-full p-3.5 text-left flex items-center justify-between gap-3 font-display font-bold text-xs md:text-sm text-navy-dark" onclick="toggleFaq(4)"><span class="">4. Will my automated systems remain operational following the conclusion of the workshop?</span><span class="material-symbols-outlined text-slate-400 text-base" id="faq-icon-4">expand_more</span></button><div class="px-4 pb-3.5 text-xs text-slate-600 leading-relaxed hidden border-t border-slate-200/80 pt-2.5" id="faq-body-4">All automated workflows are engineered directly within participants' personal account infrastructures, ensuring complete one-hundred-percent ownership.</div></div>
+<div class="rounded-xl bg-slate-50 border border-slate-200 overflow-hidden"><button class="w-full p-3.5 text-left flex items-center justify-between gap-3 font-display font-bold text-xs md:text-sm text-navy-dark" onclick="toggleFaq(5)"><span class="">5. Can corporate institutions sponsor enrollments?</span><span class="material-symbols-outlined text-slate-400 text-base" id="faq-icon-5">expand_more</span></button><div class="px-4 pb-3.5 text-xs text-slate-600 leading-relaxed hidden border-t border-slate-200/80 pt-2.5" id="faq-body-5">We fully support corporate onboarding with standard invoices and procurement. For group bookings or tailored corporate sessions, feel free to reach out to our team via WhatsApp.</div></div>
+</div>
+</section>
+<!-- FORM PENDAFTARAN & DOWNLOAD SILABUS -->
+<section class="p-6 md:p-8 rounded-2xl bg-white border border-slate-200 shadow-sm" id="contact-section">
+<div class="flex flex-col gap-1 text-center mb-5">
+<span class="text-xs font-bold text-cyan-deep tracking-wider uppercase">Enrollment &amp; Syllabus Download</span>
+<h2 class="font-display font-extrabold text-xl md:text-2xl text-navy-dark">Register for the Masterclass</h2>
+<p class="text-xs text-slate-500">Secure your seat or download the complete 12-page curriculum syllabus immediately.</p>
+</div>
+<div class="hidden p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-800 text-xs font-semibold flex items-center gap-2 mb-4" id="page-form-success">
+<span class="material-symbols-outlined text-emerald-600 text-base">check_circle</span>
+<span class="">✓ Thank You! Your registration has been received. The syllabus has been automatically downloaded to your device.</span>
+</div>
+<form class="flex flex-col gap-3" onsubmit="handlePageFormSubmit(event)">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<input class="h-10 px-3 rounded-lg bg-slate-50 border border-slate-300 text-xs text-slate-800 focus:outline-none focus:ring-2 focus:ring-navy-dark" placeholder="Full Name &amp; Title *" required="" type="text">
+<input class="h-10 px-3 rounded-lg bg-slate-50 border border-slate-300 text-xs text-slate-800 focus:outline-none focus:ring-2 focus:ring-navy-dark" placeholder="WhatsApp Number *" required="" type="tel">
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<input class="h-10 px-3 rounded-lg bg-slate-50 border border-slate-300 text-xs text-slate-800 focus:outline-none focus:ring-2 focus:ring-navy-dark" placeholder="Work / Business Email *" required="" type="email">
+<input class="h-10 px-3 rounded-lg bg-slate-50 border border-slate-300 text-xs text-slate-800 focus:outline-none focus:ring-2 focus:ring-navy-dark" placeholder="Company &amp; Role *" required="" type="text">
+</div>
+<select class="h-10 px-3 rounded-lg bg-slate-50 border border-slate-300 text-xs text-slate-800 focus:outline-none focus:ring-2 focus:ring-navy-dark">
+<option value="b7">Batch 07: March 14–15, 2026 (Menara Sentraya Jakarta - 5 Seats Left)</option>
+<option value="b8">Batch 08: March 28–29, 2026 (Waiting List)</option>
+<option value="corp">In-House Corporate Cohort (Custom Schedule)</option>
+</select>
+<button class="h-12 rounded-xl font-display font-bold text-xs md:text-sm bg-amber-brand hover:bg-amber-dark text-navy-dark shadow-md flex items-center justify-center gap-2 mt-1 transition-all" type="submit">
+<span class="">Submit Registration &amp; Download Syllabus</span>
+<span class="material-symbols-outlined text-base">download</span>
+</button>
+</form>
+</section>
+</div>
+<!-- RIGHT COLUMN: 4 COLS (STICKY FLOATING PRICING & ENROLLMENT CARD — 1/4 COLUMN) -->
+<div class="lg:col-span-4 w-full sticky top-28 flex flex-col gap-4">
+<div class="rounded-2xl bg-white border-2 border-amber-brand/50 shadow-xl p-5 md:p-6 flex flex-col gap-4 relative overflow-hidden">
+<!-- Top Status Tag -->
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-extrabold uppercase bg-amber-brand/20 text-navy-dark border border-amber-brand/40">
+<span class="w-2 h-2 rounded-full bg-amber-brand animate-ping"></span>
+            Batch 07 Intake • Only 5 Seats Left
+          </span>
+<span class="text-[11px] font-bold text-emerald-600 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">verified</span> PKP Certified
+          </span>
+</div>
+<!-- Title & Level -->
+<div>
+<h3 class="font-display font-extrabold text-base text-navy-dark leading-snug">
+            Agentic AI &amp; n8n Workflow Automation Masterclass
+          </h3>
+<p class="text-[11px] text-slate-500 mt-1">Level 1 • 2 Full Days Onsite Jakarta</p>
+</div>
+<!-- Meta Details Box -->
+<div class="p-3 rounded-xl bg-slate-50 border border-slate-200/80 flex flex-col gap-2 text-xs text-slate-700">
+<div class="flex items-center justify-between text-[11px]">
+<span class="text-slate-500">Skill Level:</span>
+<span class="font-bold text-navy-dark">Beginner – Intermediate (No Code)</span>
+</div>
+<div class="flex items-center justify-between text-[11px]">
+<span class="text-slate-500">Duration:</span>
+<span class="font-bold text-navy-dark">2 Full Days (08.30–17.00 WIB)</span>
+</div>
+<div class="flex items-center justify-between text-[11px]">
+<span class="text-slate-500">Location:</span>
+<span class="font-bold text-navy-dark">Menara Sentraya 18th Fl, South Jakarta</span>
+</div>
+<div class="flex items-center justify-between text-[11px]">
+<span class="text-slate-500">Included:</span>
+<span class="font-bold text-navy-dark">Lunch, Coffee Breaks, Free Parking</span>
+</div>
+<div class="flex items-center justify-between text-[11px]">
+<span class="text-slate-500">Output:</span>
+<span class="font-bold text-emerald-700">6 Live Workflows + Certificate</span>
+</div>
+</div>
+<!-- Pricing Banner -->
+<div class="p-3.5 rounded-xl bg-navy-dark text-white flex flex-col gap-1 border border-violet-500/20">
+<div class="flex items-center justify-between">
+<span class="text-[11px] text-slate-400">Regular Investment:</span>
+<span class="text-xs line-through text-slate-400 font-mono">Rp 3,575,000</span>
+</div>
+<div class="flex items-baseline justify-between pt-1">
+<div class="font-display font-black text-2xl text-amber-brand">Rp 2,500,000</div>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-brand text-navy-dark">Flash Promo -30%</span>
+</div>
+<span class="text-[10px] text-slate-300">All-inclusive nett per participant · Corporate invoice available.</span>
+</div>
+<!-- Primary CTAs -->
+<div class="flex flex-col gap-2 pt-1">
+<button class="w-full py-4 rounded-xl bg-amber-brand hover:bg-amber-dark text-navy-dark font-display font-extrabold text-xs tracking-wider uppercase shadow-md flex items-center justify-center gap-2 transition-all transform active:scale-95" onclick="openRegistrationModal('instant')">
+<span class="">Reserve My Seat</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<a class="w-full py-2.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 text-navy-dark font-bold text-xs flex items-center justify-center gap-2 transition-colors" href="https://wa.me/6282144995255?text=Hello%20MAXY%20Hub%2C%20I%20want%20to%20consult%20regarding%20seats%20for%20Batch%2007" target="_blank">
+<span class="material-symbols-outlined text-emerald-600 text-sm">chat</span>
+<span class="">Chat Admissions via WhatsApp</span>
+</a>
+</div>
+<!-- Webinar Option -->
+<div class="p-3 rounded-xl bg-cyan-soft border border-cyan-200 flex flex-col gap-1 text-[11px]">
+<span class="font-bold text-cyan-deep flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">play_circle</span> Want to test the waters first?
+          </span>
+<p class="text-slate-600 leading-snug">Join our free introductory Level 0 webinar (1 hour, live Zoom) every Thursday.</p>
+<a class="text-cyan-deep font-bold underline hover:text-navy-dark pt-0.5" href="#contact-section">Join Free Webinar →</a>
+</div>
+<!-- Corporate Delegation Card -->
+<div class="p-3 rounded-xl bg-slate-100 border border-slate-200/80 text-[11px] text-slate-600 flex flex-col gap-1">
+<span class="font-bold text-navy-dark">Registering a Corporate Team?</span>
+<p class="">Special packages for delegations of 3+ staff and tailored in-house training cohorts.</p>
+<a class="text-navy-dark font-bold hover:underline" href="https://wa.me/6282144995255?text=Hello%20MAXY%2C%20I%20need%20a%20corporate%20cohort%20proposal" target="_blank">Request Corporate Proposal →</a>
+</div>
+</div>
+</div>
+</div>
+</div></main>
+<!-- ================= FOOTER DENGAN 3 COLUMNS & LOGO RESMI https://lh3.googleusercontent.com/aida-public/AB6AXuDNjZf-W7eH4jrbQ6JvHjtXy5sdEFNmN_ZL326sVKv06aANxgbTHLIWhXa-Mp1SDaP-oVzyzGGhsYF9-gOliRtKADh1MvwFCqd00Sy7RYxGmdOxNkh694K9Yhajhdp5PJMMSie3r1mgaTuxmlP1V-M8zmYWmWefJ_2d0rOqwGytLosZl4raw67skeLpUiAJisC9IifKt0eczlbtTx2pu_0PlxYQ4nKPMLunrTRQMdWTPPpopzHb2mmDkw ================= -->
+<footer class="w-full bg-navy-dark text-white pt-12 pb-8 border-t border-violet-500/20">
+<div class="max-w-[1280px] mx-auto px-4 md:px-6">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-10 border-b border-white/10">
+<!-- Col 1: Brand & Legitimacy -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 self-start">
+<img alt="MAXY Academy Logo" class="w-10 h-10 rounded-xl object-contain bg-navy-cosmic p-1 border border-violet-500/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc4tFE5LnsyIBJloK9Hs-mIqJjswo5sSpRoOrpzBKwpaFhhQebDInEpyrVnrFTR5iK07hAKliAHsfvwWcfj0F_vX5FRJ7JRm1aPg2w7WwI6IHOVcvs5Bx4gEG6MH9ZqgK8ECsj3UDX2rHeU-c-BLgL7-9HRLVj3K1nHwhZNTpDDu8xerFpjOeMlN_zEGfTj_ck-4HTG0uClfU4dZCtQsD1PXZ_xQcUra5Ln6idVosBwnLrNxGhLQVLqQ">
+<div class="flex flex-col">
+<span class="font-display font-black text-lg text-white tracking-tight">MAXY <span class="text-violet-400">AI HUB</span></span>
+<span class="text-[9px] text-slate-400 uppercase font-bold tracking-widest">MAXY ACADEMY</span>
+</div>
+</div>
+<p class="text-xs text-slate-300 leading-relaxed max-w-sm">Southeast Asia's leading agentic workflow automation hub. Transforming repetitive business operations into autonomous multi-agent pipelines with n8n.</p>
+<div class="flex flex-col gap-1 text-xs text-slate-300">
+<span class="font-bold text-white">MAXY AI Hub Jakarta:</span>
+<span class="">Menara Sentraya 18th Floor, Jl. Iskandarsyah Raya No. 1A, Melawai, Kebayoran Baru, South Jakarta, DKI Jakarta 12160</span>
+</div>
+</div>
+<!-- Col 2: Quick Navigation -->
+<div class="flex flex-col gap-2.5 text-xs text-slate-300">
+<h4 class="font-display font-bold text-white text-sm">Quick Navigation</h4>
+<a class="hover:text-amber-brand transition-colors" href="#hero">Masterclass Overview</a>
+<a class="hover:text-amber-brand transition-colors" href="#what-you-get">What You'll Get</a>
+<a class="hover:text-amber-brand transition-colors" href="#workflows-section">6 Production Workflows</a>
+<a class="hover:text-amber-brand transition-colors" href="#curriculum-section">2-Day Curriculum</a>
+<a class="hover:text-amber-brand transition-colors" href="#roi-section">ROI &amp; Savings Calculator</a>
+<a class="hover:text-amber-brand transition-colors" href="#trainer-section">Facilitator Profile</a>
+<a class="hover:text-amber-brand transition-colors" href="#faq-section">Frequently Asked Questions</a>
+</div>
+<!-- Col 3: Customer Support & Admissions -->
+<div class="flex flex-col gap-3 text-xs text-slate-300">
+<h4 class="font-display font-bold text-white text-sm">Admissions &amp; Support</h4>
+<p class="">Need an instant proforma invoice or custom corporate proposal for procurement?</p>
+<div class="flex flex-col gap-1 text-xs text-slate-200">
+<span class=""><strong>Email:</strong> <a class="hover:underline text-cyan-300" href="mailto:feli.maxyacademy@gmail.com">feli.maxyacademy@gmail.com</a></span>
+<span class=""><strong>WhatsApp:</strong> <a class="hover:underline text-emerald-400" href="https://wa.me/6282144995255" target="_blank">+62 821-4499-5255</a></span>
+</div>
+<a class="mt-2 px-4 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold flex items-center justify-center gap-1.5 transition-colors self-start" href="https://wa.me/6282144995255?text=Hello%20MAXY%20Admissions%2C%20I%20would%20like%20to%20enroll%20for%20Batch%2007" target="_blank">
+<span class="material-symbols-outlined text-sm">chat</span>
+<span class="">Chat Admissions: +62 821-4499-5255</span>
+</a>
+<span class="text-[11px] text-slate-400">Monday – Saturday • 08:30 – 20:00 WIB</span>
+</div>
+</div>
+<!-- Bottom Row -->
+<div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400">
+<div class="">© 2026 PT Mahakarya Akademi Indonesia (MAXY Academy). All rights reserved.</div>
+<div class="flex items-center gap-2">
+<span class="">HolonIQ Southeast Asia EdTech 50 Honoree</span>
+<span class="">•</span>
+<span class="text-amber-brand">MAXY AI Hub</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- ================= MODAL 1: REGISTRATION LIGHTBOX MODAL ================= -->
+<div class="fixed inset-0 z-50 bg-navy-dark/85 backdrop-blur-md hidden items-center justify-center p-4" id="registration-modal">
+<div class="w-full max-w-xl rounded-2xl bg-white shadow-2xl p-6 md:p-8 flex flex-col gap-5 relative max-h-[92vh] overflow-y-auto">
+<button class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition-colors" onclick="closeRegistrationModal()">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+<div class="flex items-center gap-3">
+<img alt="MAXY Logo" class="w-10 h-10 rounded-xl object-contain bg-navy-dark p-1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc4tFE5LnsyIBJloK9Hs-mIqJjswo5sSpRoOrpzBKwpaFhhQebDInEpyrVnrFTR5iK07hAKliAHsfvwWcfj0F_vX5FRJ7JRm1aPg2w7WwI6IHOVcvs5Bx4gEG6MH9ZqgK8ECsj3UDX2rHeU-c-BLgL7-9HRLVj3K1nHwhZNTpDDu8xerFpjOeMlN_zEGfTj_ck-4HTG0uClfU4dZCtQsD1PXZ_xQcUra5Ln6idVosBwnLrNxGhLQVLqQ">
+<div>
+<span class="text-[11px] font-bold text-cyan-deep uppercase tracking-wider">Lock In Your Seat • Batch 07</span>
+<h3 class="font-display font-extrabold text-xl text-navy-dark">Masterclass Enrollment</h3>
+</div>
+</div>
+<!-- Switcher -->
+<div class="grid grid-cols-2 gap-1 p-1 bg-slate-100 rounded-xl text-xs font-bold text-center">
+<button class="py-2 rounded-lg bg-navy-dark text-white transition-all" id="tab-btn-instant" onclick="switchModalTab('instant')">
+          Individual Registration
+        </button>
+<button class="py-2 rounded-lg text-slate-600 hover:text-navy-dark transition-all" id="tab-btn-corporate" onclick="switchModalTab('corporate')">
+          Corporate PO &amp; Invoice
+        </button>
+</div>
+<!-- Alert -->
+<div class="hidden p-3 rounded-xl bg-emerald-50 border border-emerald-300 text-emerald-800 text-xs font-semibold flex items-center gap-2" id="modal-form-success">
+<span class="material-symbols-outlined text-emerald-600 text-base">check_circle</span>
+<span class="">✓ Thank You! Your registration has been received. Syllabus is downloading...</span>
+</div>
+<form class="flex flex-col gap-3" onsubmit="handleModalFormSubmit(event)">
+<div class="flex flex-col gap-1">
+<label class="text-xs font-bold text-navy-dark">Full Name &amp; Title</label>
+<input class="h-10 px-3 rounded-lg border border-slate-300 text-xs focus:outline-none focus:ring-2 focus:ring-navy-dark" placeholder="e.g. Alex Johnson" required="" type="text">
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="flex flex-col gap-1">
+<label class="text-xs font-bold text-navy-dark">WhatsApp Number</label>
+<input class="h-10 px-3 rounded-lg border border-slate-300 text-xs focus:outline-none focus:ring-2 focus:ring-navy-dark" placeholder="+62 812-xxxx-xxxx" required="" type="tel">
+</div>
+<div class="flex flex-col gap-1">
+<label class="text-xs font-bold text-navy-dark">Work Email</label>
+<input class="h-10 px-3 rounded-lg border border-slate-300 text-xs focus:outline-none focus:ring-2 focus:ring-navy-dark" placeholder="alex@company.com" required="" type="email">
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="text-xs font-bold text-navy-dark">Company / Organization</label>
+<input class="h-10 px-3 rounded-lg border border-slate-300 text-xs focus:outline-none focus:ring-2 focus:ring-navy-dark" placeholder="Company Name (Optional for individual)" type="text">
+</div>
+<div class="flex flex-col gap-1">
+<label class="text-xs font-bold text-navy-dark">Cohort Intake</label>
+<select class="h-10 px-3 rounded-lg border border-slate-300 text-xs focus:outline-none focus:ring-2 focus:ring-navy-dark">
+<option>Batch 07: March 14–15, 2026 (Menara Sentraya Jakarta)</option>
+<option>Batch 08: March 28–29, 2026</option>
+</select>
+</div>
+<div class="flex flex-col gap-1 pt-1" id="modal-payment-section">
+<label class="text-xs font-bold text-navy-dark">Payment Method</label>
+<div class="grid grid-cols-3 gap-2 text-center text-xs">
+<label class="p-2 rounded-lg bg-slate-50 border border-slate-200 cursor-pointer hover:bg-slate-100 flex flex-col items-center gap-1 font-medium">
+<input checked="" class="accent-[#FBB041]" name="pay" type="radio">
+<span class="">Instant QRIS</span>
+</label>
+<label class="p-2 rounded-lg bg-slate-50 border border-slate-200 cursor-pointer hover:bg-slate-100 flex flex-col items-center gap-1 font-medium">
+<input class="accent-[#FBB041]" name="pay" type="radio">
+<span class="">Bank Transfer</span>
+</label>
+<label class="p-2 rounded-lg bg-slate-50 border border-slate-200 cursor-pointer hover:bg-slate-100 flex flex-col items-center gap-1 font-medium">
+<input class="accent-[#FBB041]" name="pay" type="radio">
+<span class="">Credit Card</span>
+</label>
+</div>
+</div>
+<div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between text-xs mt-1">
+<div>
+<span class="text-slate-500 block">Total Due (Nett):</span>
+<span class="font-display font-bold text-base text-navy-dark">Rp 2,500,000</span>
+</div>
+<span class="text-[10px] px-2 py-1 rounded bg-amber-brand text-navy-dark font-bold">Save 30% (Standard Rp 3,575,000)</span>
+</div>
+<button class="h-12 rounded-xl font-display font-bold text-xs md:text-sm bg-amber-brand hover:bg-amber-dark text-navy-dark shadow-md flex items-center justify-center gap-2 mt-1 transition-all" type="submit">
+<span class="">Complete Registration &amp; Download Syllabus</span>
+<span class="material-symbols-outlined text-base">download</span>
+</button>
+</form>
+<div class="text-center text-[11px] text-slate-500">
+        Need assistance? <a class="text-emerald-700 font-bold hover:underline" href="https://wa.me/6282144995255" target="_blank">Chat Admissions: +62 821-4499-5255</a>
+</div>
+</div>
+</div>
+<!-- ================= MODAL 2: LIGHTBOX PREVIEW BLUEPRINT / ZOOM FOTO ================= -->
+<div class="fixed inset-0 z-50 bg-navy-dark/90 backdrop-blur-md hidden items-center justify-center p-4" id="blueprint-lightbox">
+<div class="w-full max-w-4xl rounded-2xl bg-[#09153D] border border-cyan-500/40 p-6 md:p-8 text-white relative flex flex-col gap-4 max-h-[92vh] overflow-y-auto">
+<button class="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center" onclick="closeBlueprintLightbox()">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-brand text-navy-dark" id="lb-badge">Workflow Blueprint Inspector</span>
+<span class="text-xs text-cyan-glow font-mono">[Zoom Level: 100%]</span>
+</div>
+<h3 class="font-display font-extrabold text-xl md:text-2xl text-white" id="lb-title">Full Diagram n8n Orchestration</h3>
+<p class="text-xs text-slate-300" id="lb-desc">Complete schematic showing incoming trigger nodes, conditional routing, and JSON parameters configured live during class.</p>
+<div class="p-6 rounded-xl bg-black/60 border border-white/10 flex flex-col items-center justify-center gap-4 text-center">
+<div class="w-full py-8 px-4 rounded-xl border border-dashed border-cyan-500/50 bg-navy-dark/60 flex flex-col items-center gap-4">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<div class="p-3 rounded-xl bg-white/10 border border-cyan-glow text-cyan-glow font-mono text-xs flex flex-col items-center">
+<span class="material-symbols-outlined text-lg">call_received</span>
+<span class="font-bold">Webhook Trigger</span>
+</div>
+<span class="text-amber-brand font-bold text-xl">➔</span>
+<div class="p-3 rounded-xl bg-amber-brand/20 border border-amber-brand text-amber-300 font-mono text-xs flex flex-col items-center">
+<span class="material-symbols-outlined text-lg">psychology</span>
+<span class="font-bold">AI Agent Evaluator</span>
+</div>
+<span class="text-amber-brand font-bold text-xl">➔</span>
+<div class="p-3 rounded-xl bg-purple-500/20 border border-purple-400 text-purple-300 font-mono text-xs flex flex-col items-center">
+<span class="material-symbols-outlined text-lg">database</span>
+<span class="font-bold">Database Read/Write</span>
+</div>
+<span class="text-amber-brand font-bold text-xl">➔</span>
+<div class="p-3 rounded-xl bg-emerald-500/20 border border-emerald-400 text-emerald-300 font-mono text-xs flex flex-col items-center">
+<span class="material-symbols-outlined text-lg">send</span>
+<span class="font-bold">Dispatch Message / PDF</span>
+</div>
+</div>
+<div class="font-mono text-xs text-slate-300 bg-white/5 px-4 py-2 rounded-lg border border-white/10">
+            Validated against Production Meta API, Google Workspace, Midtrans, &amp; Claude 3.5 Sonnet
+          </div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2">
+<button class="px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-xs font-bold text-white flex items-center gap-1.5 transition-colors" onclick="triggerSilabusDownload()">
+<span class="material-symbols-outlined text-sm">download</span>
+<span class="">Download JSON Template</span>
+</button>
+<button class="px-6 py-2.5 rounded-xl bg-amber-brand hover:bg-amber-dark text-xs font-bold text-navy-dark flex items-center gap-1.5 transition-colors" onclick="closeBlueprintLightbox(); openRegistrationModal('instant');">
+<span class="">Reserve My Seat to Build This</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ================= MODAL 3: EXIT-INTENT POP-UP ================= -->
+<div class="fixed inset-0 z-50 bg-navy-dark/85 backdrop-blur-md items-center justify-center p-4 hidden" id="exit-modal">
+<div class="w-full max-w-md rounded-2xl bg-white shadow-2xl p-6 md:p-8 flex flex-col gap-4 relative border-4 border-amber-brand text-center">
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center" onclick="closeExitModal()">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+<div class="w-14 h-14 rounded-2xl bg-amber-brand/20 text-amber-brand mx-auto flex items-center justify-center shadow-inner">
+<span class="material-symbols-outlined text-3xl">warning</span>
+</div>
+<div>
+<span class="text-xs font-bold text-rose-600 uppercase tracking-wider">Wait Before You Go!</span>
+<h3 class="font-display font-black text-xl text-navy-dark mt-1">
+          Secure Your Seat — Only 5 Left for Batch 07
+        </h3>
+<p class="text-xs text-slate-600 mt-2 leading-relaxed">
+          Don't let your team keep losing hours to manual message typing and disconnected reports. Claim your 30% discount today.
+        </p>
+</div>
+<div class="p-3 rounded-xl bg-slate-50 border border-slate-200 text-xs flex items-center justify-between">
+<span class="text-slate-500">Special Cohort Fee:</span>
+<span class="font-display font-extrabold text-base text-navy-dark">Rp 2,500,000 <span class="text-[10px] text-slate-400 line-through">Rp 3,575,000</span></span>
+</div>
+<div class="flex flex-col gap-2 pt-1">
+<button class="w-full py-3.5 rounded-xl bg-amber-brand hover:bg-amber-dark text-navy-dark font-display font-bold text-xs uppercase tracking-wider shadow-md transition-all" onclick="claimExitDiscount()">Reserve My Seat • Claim Discount →</button>
+<button class="text-xs text-slate-400 hover:text-slate-600 transition-colors" onclick="closeExitModal()">
+          No thanks, I prefer manual operational tasks
+        </button>
+</div>
+</div>
+</div>
+<!-- ================= JAVASCRIPT LOGIC (ALL 7 FEATURES IN FULL ENGLISH) ================= -->
+<script>
+    // DATA WORKFLOWS 1-6 IN FULL ENGLISH
+    const workflowsData = {
+      1: {
+        badge: "Workflow 01 • Customer Support Ops",
+        title: "Contextual Customer Support Agent 24/7",
+        desc: "Deploy an AI agent connected to WhatsApp Business & live web chat. It ingests your company catalog, checks shipment tracking codes, and smoothly escalates nuanced inquiries to human reps.",
+        trigger: "WhatsApp Webhook / Inbound Chat",
+        core: "OpenAI Embeddings + RAG Vector Database",
+        output: "Google Sheets CRM + WhatsApp Instant Dispatch",
+        saving: "Cuts 85% of Routine Chat Volume",
+        nodesCount: "4 Connected Nodes",
+        json: `{\n  "event": "whatsapp_incoming",\n  "customer": "+62812XXXXX",\n  "intent": "check_catalog_and_price",\n  "ai_agent_status": "executed_successfully",\n  "response_time": "310ms"\n}`
+      },
+      2: {
+        badge: "Workflow 02 • Growth & Social Media",
+        title: "Instagram DM & Lead Capturer",
+        desc: "Detect comments containing high-intent keywords ('PRICE', 'INFO', 'WANT'), dispatch an automated promotional DM within 3 seconds, and log lead contact details to your sales database.",
+        trigger: "Meta Graph API (IG Comments & Mentions)",
+        core: "Keyword Parser + Claude 3.5 Sentiment Guard",
+        output: "Direct Message Dispatcher + CRM Webhook",
+        saving: "3-Second Instant Response to Hot Leads",
+        nodesCount: "5 Connected Nodes",
+        json: `{\n  "source": "instagram_comment",\n  "username": "@growth_founder",\n  "trigger_word": "PRICE",\n  "dm_sent": true,\n  "lead_saved_to_sheets": "Row #482"\n}`
+      },
+      3: {
+        badge: "Workflow 03 • Executive Ops",
+        title: "Automated Executive Scheduled Report",
+        desc: "Pulls weekly sales metrics and operational KPIs autonomously, generates a polished executive brief PDF with charts, and posts an executive summary to leadership Telegram channels every Monday at 08:00.",
+        trigger: "Cron Scheduler Trigger (Mondays 08:00 WIB)",
+        core: "Claude 3.5 Sonnet Analysis Engine",
+        output: "Auto-generated PDF + Telegram Management Bot",
+        saving: "Saves 4 Hours Every Friday Evening",
+        nodesCount: "6 Connected Nodes",
+        json: `{\n  "schedule": "08:00_WIB_MONDAY",\n  "metric_summary": "revenue_+24%_dod",\n  "pdf_rendered": "Weekly_Report_Week10.pdf",\n  "telegram_sent": "Channel #Executive-Board"\n}`
+      },
+      4: {
+        badge: "Workflow 04 • Revenue Operations",
+        title: "Real-Time Operations & Revenue Dashboard",
+        desc: "Live synchronization across payment gateways (Midtrans/Xendit), auto-calculates daily target progress, and fires instant ops alerts if checkout anomalies or repeated transaction failures occur.",
+        trigger: "Payment Gateway HTTP Webhook (Midtrans/Xendit)",
+        core: "Payload Normalizer & Anomaly Threshold Filter",
+        output: "Slack / Discord Ops Alerts + SQL Database Sync",
+        saving: "Zero Unmonitored Transaction Leaks",
+        nodesCount: "5 Connected Nodes",
+        json: `{\n  "payment_id": "ORD-98214",\n  "status": "settlement",\n  "amount_idr": 2500000,\n  "alert_dispatched": "Slack #sales-success",\n  "sql_sync": "synced"\n}`
+      },
+      5: {
+        badge: "Workflow 05 • Finance & Accounting",
+        title: "Document & Invoice PDF Vision OCR Extractor",
+        desc: "Receive vendor invoices or transfer receipts via email or WhatsApp. AI Vision extracts tax IDs, bank numbers, subtotal, and VAT, inserting clean records into your ledger with zero manual keystrokes.",
+        trigger: "Inbound Email IMAP / WhatsApp Image Attachment",
+        core: "GPT-4o Vision OCR & JSON Schema Parser",
+        output: "Accounting Database / Google Sheets Ledger",
+        saving: "Reduces Finance Document Entry by 80%",
+        nodesCount: "5 Connected Nodes",
+        json: `{\n  "document_type": "Vendor_Invoice_Tax",\n  "tax_id_detected": "01.234.567.8-901.000",\n  "total_extracted": 14250000,\n  "confidence_score": 0.99,\n  "sheets_row": "Finance_2026_Q1"\n}`
+      },
+      6: {
+        badge: "Workflow 06 • Sales Operations",
+        title: "Instant High-Ticket Lead Router & Notifier",
+        desc: "Scores leads instantly based on budget and urgency criteria, routing qualified enterprise prospects directly to your top account executives via WhatsApp in less than 10 seconds.",
+        trigger: "Website Form / Typeform Ingestion",
+        core: "Lead Scoring LLM + Round-Robin Dispatch Logic",
+        output: "Direct WhatsApp Account Executive + Hubspot Sync",
+        saving: "Increases Closing Rates by up to 2.8x",
+        nodesCount: "4 Connected Nodes",
+        json: `{\n  "lead_name": "Acme Global Corp",\n  "budget_tier": "Enterprise (>50m)",\n  "lead_score": 96,\n  "routed_to": "AE_Senior_Team_3",\n  "whatsapp_ping": "Sent in 6.4s"\n}`
+      }
+    };
+
+    let currentWfId = 1;
+
+    // FEATURE 5: TAB SELECTOR WORKFLOW
+    function selectWorkflow(id) {
+      currentWfId = id;
+      const data = workflowsData[id];
+      if (!data) return;
+
+      for (let i = 1; i <= 6; i++) {
+        const tab = document.getElementById(`wf-tab-${i}`);
+        if (tab) {
+          if (i === id) {
+            tab.className = "wf-tab active whitespace-nowrap px-4 py-2.5 rounded-xl font-bold text-xs bg-navy-dark text-white flex items-center gap-2 transition-all shadow-sm";
+            tab.querySelector('span:first-child').className = "w-5 h-5 rounded-full bg-amber-brand text-navy-dark flex items-center justify-center text-[10px]";
+          } else {
+            tab.className = "wf-tab whitespace-nowrap px-4 py-2.5 rounded-xl font-bold text-xs bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 flex items-center gap-2 transition-all";
+            tab.querySelector('span:first-child').className = "w-5 h-5 rounded-full bg-slate-200 text-slate-700 flex items-center justify-center text-[10px]";
+          }
+        }
+      }
+
+      document.getElementById('wf-badge').innerText = data.badge;
+      document.getElementById('wf-title').innerText = data.title;
+      document.getElementById('wf-desc').innerText = data.desc;
+      document.getElementById('wf-trigger').innerText = data.trigger;
+      document.getElementById('wf-core').innerText = data.core;
+      document.getElementById('wf-output').innerText = data.output;
+      document.getElementById('wf-saving').innerText = data.saving;
+      document.getElementById('wf-nodes-count').innerText = data.nodesCount;
+      document.getElementById('wf-json-snippet').innerText = data.json;
+    }
+
+    // FEATURE 5: INSPECT BLUEPRINT / ZOOM MODAL
+    function inspectBlueprint(id) {
+      const data = workflowsData[id || currentWfId];
+      if (!data) return;
+      document.getElementById('lb-badge').innerText = data.badge;
+      document.getElementById('lb-title').innerText = "Blueprint: " + data.title;
+      document.getElementById('lb-desc').innerText = data.desc;
+      
+      const modal = document.getElementById('blueprint-lightbox');
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+    }
+
+    function closeBlueprintLightbox() {
+      const modal = document.getElementById('blueprint-lightbox');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+
+    // FEATURE 6: DYNAMIC ROI CALCULATOR
+    function runROICalculation() {
+      const hoursInput = document.getElementById('calc-hours-input');
+      const membersInput = document.getElementById('calc-members-input');
+      const hoursVal = document.getElementById('calc-hours-val');
+      const membersVal = document.getElementById('calc-members-val');
+      const resHours = document.getElementById('res-hours');
+      const resRupiah = document.getElementById('res-rupiah');
+
+      if (!hoursInput || !membersInput) return;
+
+      const hours = parseInt(hoursInput.value, 10);
+      const members = parseInt(membersInput.value, 10);
+
+      hoursVal.innerText = `${hours} Hours`;
+      membersVal.innerText = `${members} People`;
+
+      const savedMonthlyHours = Math.round(hours * 0.70 * members * 4);
+      resHours.innerText = savedMonthlyHours;
+
+      const savedRupiah = savedMonthlyHours * 125000;
+      resRupiah.innerText = 'Rp ' + savedRupiah.toLocaleString('id-ID');
+    }
+
+    // FEATURE 4: FAQ ACCORDION
+    function toggleFaq(id) {
+      const body = document.getElementById(`faq-body-${id}`);
+      const icon = document.getElementById(`faq-icon-${id}`);
+      if (!body) return;
+
+      if (body.classList.contains('hidden')) {
+        body.classList.remove('hidden');
+        if (icon) icon.classList.add('rotate-180');
+      } else {
+        body.classList.add('hidden');
+        if (icon) icon.classList.remove('rotate-180');
+      }
+    }
+
+    // FEATURE 1: REGISTRATION MODAL
+    function openRegistrationModal(tab = 'instant') {
+      const modal = document.getElementById('registration-modal');
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        switchModalTab(tab);
+      }
+    }
+
+    function closeRegistrationModal() {
+      const modal = document.getElementById('registration-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+
+    function switchModalTab(type) {
+      const btnInstant = document.getElementById('tab-btn-instant');
+      const btnCorp = document.getElementById('tab-btn-corporate');
+      const paySection = document.getElementById('modal-payment-section');
+
+      if (type === 'instant') {
+        btnInstant.className = "py-2 rounded-lg bg-navy-dark text-white transition-all";
+        btnCorp.className = "py-2 rounded-lg text-slate-600 hover:text-navy-dark transition-all";
+        if (paySection) paySection.classList.remove('hidden');
+      } else {
+        btnCorp.className = "py-2 rounded-lg bg-navy-dark text-white transition-all";
+        btnInstant.className = "py-2 rounded-lg text-slate-600 hover:text-navy-dark transition-all";
+        if (paySection) paySection.classList.add('hidden');
+      }
+    }
+
+    // FEATURE 2: AUTO DOWNLOAD CURRICULUM SYLLABUS
+    function triggerSilabusDownload() {
+      const syllabusText = `=====================================================
+MAXY AI HUB — AGENTIC AI & WORKFLOW AUTOMATION MASTERCLASS
+FULL CURRICULUM SYLLABUS (LEVEL 1 • 2 FULL DAYS ONSITE)
+Batch 07: March 14–15, 2026 | Venue: Menara Sentraya Jakarta
+=====================================================
+
+DAY 1: FOUNDATIONS & PRODUCTION WORKFLOWS 1-3
+- Agentic Architecture vs. Traditional Prompting
+- Setting up visual node runtime and self-hosted/cloud n8n
+- Workflow 01: Contextual Customer Support Agent 24/7 (WhatsApp + RAG)
+- Workflow 02: Instagram Comment to DM Lead Capture
+- Workflow 03: Automated Scheduled Executive Report (PDF + Telegram)
+
+DAY 2: ADVANCED MULTI-NODE WORKFLOWS 4-6 & DEPLOYMENT
+- Workflow 04: Real-Time Operations & Revenue Dashboard (Payment Webhooks)
+- Workflow 05: Document & Invoice PDF Vision OCR Extractor
+- Workflow 06: Instant High-Ticket Lead Router & Notifier
+- 1-on-1 Facilitator Verification & Official Executive Certification
+
+PT Mahakarya Akademi Indonesia (MAXY Academy)
+Official Admissions WhatsApp: +62 821-4499-5255
+Contact: feli.maxyacademy@gmail.com
+=====================================================`;
+
+      const blob = new Blob([syllabusText], { type: 'text/plain;charset=utf-8' });
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'MAXY-Agentic-AI-Syllabus-Level1.txt';
+      document.body.appendChild(a);
+      a.click();
+      window.URL.revokeObjectURL(url);
+      document.body.removeChild(a);
+    }
+
+    function handleModalFormSubmit(event) {
+      event.preventDefault();
+      const successEl = document.getElementById('modal-form-success');
+      if (successEl) successEl.classList.remove('hidden');
+      triggerSilabusDownload();
+      setTimeout(() => {
+        alert('Thank you! Your registration has been received. Our admissions team will reach out via WhatsApp shortly.');
+        closeRegistrationModal();
+        if (successEl) successEl.classList.add('hidden');
+      }, 1500);
+    }
+
+    function handlePageFormSubmit(event) {
+      event.preventDefault();
+      const successEl = document.getElementById('page-form-success');
+      if (successEl) {
+        successEl.classList.remove('hidden');
+        successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      triggerSilabusDownload();
+    }
+
+    // FEATURE 6: PARTNERS FILTERING
+    function filterPartners(category) {
+      const items = document.querySelectorAll('.partner-item');
+      const buttons = document.querySelectorAll('.partner-filter-btn');
+
+      buttons.forEach(btn => {
+        btn.className = "px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 font-medium hover:bg-slate-200 transition-all partner-filter-btn";
+      });
+
+      const activeBtn = document.getElementById(`filter-${category}`);
+      if (activeBtn) activeBtn.className = "px-3 py-1.5 rounded-lg bg-navy-dark text-white font-bold transition-all partner-filter-btn";
+
+      items.forEach(item => {
+        if (category === 'all') {
+          item.style.display = 'inline-flex';
+        } else if (item.classList.contains(category)) {
+          item.style.display = 'inline-flex';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // FEATURE 7: EXIT-INTENT MODAL
+    let hasShownExitIntent = false;
+    document.addEventListener('mouseleave', function(e) {
+      if (e.clientY <= 0 && !hasShownExitIntent) {
+        hasShownExitIntent = true;
+        const exitModal = document.getElementById('exit-modal');
+        if (exitModal) {
+          exitModal.classList.remove('hidden');
+          exitModal.classList.add('flex');
+        }
+      }
+    });
+
+    function closeExitModal() {
+      const exitModal = document.getElementById('exit-modal');
+      if (exitModal) {
+        exitModal.classList.add('hidden');
+        exitModal.classList.remove('flex');
+      }
+    }
+
+    function claimExitDiscount() {
+      closeExitModal();
+      openRegistrationModal('instant');
+    }
+
+    // Setup Partner Marquee Drag
+    (function setupPartnerDrag() {
+      const container = document.getElementById('partner-carousel-container');
+      const marquee = document.getElementById('partner-marquee');
+      if (!container || !marquee) return;
+
+      let isDown = false;
+      let startX = 0;
+      let scrollLeft = 0;
+
+      container.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - container.offsetLeft;
+        scrollLeft = container.scrollLeft;
+        marquee.style.animationPlayState = 'paused';
+      });
+
+      container.addEventListener('mouseleave', () => {
+        if (!isDown) return;
+        isDown = false;
+        marquee.style.animationPlayState = 'running';
+      });
+
+      container.addEventListener('mouseup', () => {
+        isDown = false;
+        marquee.style.animationPlayState = 'running';
+      });
+
+      container.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - container.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        container.scrollLeft = scrollLeft - walk;
+      });
+
+      container.addEventListener('mouseenter', () => {
+        marquee.style.animationPlayState = 'paused';
+      });
+      container.addEventListener('mouseleave', () => {
+        marquee.style.animationPlayState = 'running';
+      });
+    })();
+
+    // Initialize Calculator on DOM load
+    document.addEventListener('DOMContentLoaded', function() {
+      runROICalculation();
+    });
+  </script>
+
+
+</body></html>
